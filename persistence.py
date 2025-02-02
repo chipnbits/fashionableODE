@@ -34,7 +34,7 @@ def load_model(model, path, device=None):
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     # Load the checkpoint
-    checkpoint = torch.load(path, map_location=device)
+    checkpoint = torch.load(path, map_location=device, weights_only=True)
 
     # Check if the loaded checkpoint is a dictionary with expected keys or just a state_dict
     if isinstance(checkpoint, dict) and "model_state_dict" in checkpoint:
