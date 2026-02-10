@@ -1,6 +1,6 @@
 # FIGURE
 figure.facecolor: white
-figure.dpi: 200
+figure.dpi: 100
 
 # FONT
 font.family: serif
